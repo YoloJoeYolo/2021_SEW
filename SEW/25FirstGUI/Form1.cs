@@ -17,5 +17,9 @@ namespace _25FirstGUI
             InitializeComponent();
         }
 
+        private void btnPleaseKlickMe_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
