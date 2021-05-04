@@ -19,6 +19,7 @@ namespace _25FirstGUI
 
         private void btnPleaseKlickMe_Click(object sender, EventArgs e)
         {
+            // Wenn button gedrückt wird, wird genau diese Methode aufgerufen
             this.txtHelloWorld.Text = "Hello World";
         }
     }
