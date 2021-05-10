@@ -44,6 +44,7 @@ namespace _25FirstGUI
             this.btnPleaseKlickMe.Text = "Please Klick Me";
             this.btnPleaseKlickMe.UseVisualStyleBackColor = false;
             this.btnPleaseKlickMe.Click += new System.EventHandler(this.btnPleaseKlickMe_Click);
+            this.btnPleaseKlickMe.MouseEnter += new System.EventHandler(this.btnPleaseKlickMe_MouseEnter);
             // 
             // txtHelloWorld
             // 
