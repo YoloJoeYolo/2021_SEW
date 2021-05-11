@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "25FirstGUI", "25FirstGUI\25FirstGUI.csproj", "{886A81BB-60DB-4ECC-87B6-AB9B5CF34042}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "25FirstGUI", "25FirstGUI\25FirstGUI.csproj", "{886A81BB-60DB-4ECC-87B6-AB9B5CF34042}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "26AccessControl", "26AccessControl\26AccessControl.csproj", "{7C211E8D-0F1E-4C8C-82F0-ACDF0F7BE31D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{886A81BB-60DB-4ECC-87B6-AB9B5CF34042}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{886A81BB-60DB-4ECC-87B6-AB9B5CF34042}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{886A81BB-60DB-4ECC-87B6-AB9B5CF34042}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C211E8D-0F1E-4C8C-82F0-ACDF0F7BE31D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C211E8D-0F1E-4C8C-82F0-ACDF0F7BE31D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C211E8D-0F1E-4C8C-82F0-ACDF0F7BE31D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C211E8D-0F1E-4C8C-82F0-ACDF0F7BE31D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
