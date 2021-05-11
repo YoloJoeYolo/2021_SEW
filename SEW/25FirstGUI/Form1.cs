@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace _25FirstGUI
 {
-    public partial class Form1 : Form
+    public partial class FirstGUI : Form
     {
-        public Form1()
+        public FirstGUI()
         {
             InitializeComponent();
         }
@@ -33,6 +33,11 @@ namespace _25FirstGUI
             int x = rand.Next(widthOfForm - b.Size.Width);    // Breite von Button noch abziehem, damit er auch sicher Platz hat
             int y = rand.Next(heightOfForm - b.Size.Height);
             b.Location = new Point(x, y);
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
     }

@@ -1,7 +1,7 @@
 ﻿
 namespace _25FirstGUI
 {
-    partial class Form1
+    partial class FirstGUI
     {
         /// <summary>
         ///  Required designer variable.
@@ -53,15 +53,16 @@ namespace _25FirstGUI
             this.txtHelloWorld.Size = new System.Drawing.Size(159, 23);
             this.txtHelloWorld.TabIndex = 1;
             // 
-            // Form1
+            // FirstGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtHelloWorld);
             this.Controls.Add(this.btnPleaseKlickMe);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FirstGUI";
+            this.Text = "FirstGUI";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
