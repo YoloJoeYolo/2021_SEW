@@ -35,10 +35,5 @@ namespace _25FirstGUI
             b.Location = new Point(x, y);
 
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -62,7 +62,6 @@ namespace _25FirstGUI
             this.Controls.Add(this.btnPleaseKlickMe);
             this.Name = "FirstGUI";
             this.Text = "FirstGUI";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
