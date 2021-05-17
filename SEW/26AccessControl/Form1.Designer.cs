@@ -1,6 +1,6 @@
 ﻿namespace _26AccessControl
 {
-    partial class AccessControl
+    partial class AccesControlForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -64,6 +64,7 @@
             this.txtMaxPersons.Name = "txtMaxPersons";
             this.txtMaxPersons.Size = new System.Drawing.Size(100, 23);
             this.txtMaxPersons.TabIndex = 2;
+            this.txtMaxPersons.TextChanged += new System.EventHandler(this.txtMaxPersons_TextChanged);
             // 
             // txtCurrentPersons
             // 
@@ -73,7 +74,6 @@
             this.txtCurrentPersons.ReadOnly = true;
             this.txtCurrentPersons.Size = new System.Drawing.Size(100, 23);
             this.txtCurrentPersons.TabIndex = 3;
-            this.txtCurrentPersons.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // btnIncrement1
             // 
