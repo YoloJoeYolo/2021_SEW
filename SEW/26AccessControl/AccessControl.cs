@@ -26,27 +26,17 @@ namespace _26AccessControl
             }
         }
 
-        public bool canEnter()
+        public bool canEnter(int persons = 1)
         {
-            return this.currentCount < this.maxCount;
+            return this.currentCount + persons <= this.maxCount && this.currentCount + persons >= 0;
         }
 
-        public void Increment()
-        {
-            this.currentCount++;
-        }
-
-        public void Increment(int count)
+        public void Increment(int count = 1)
         {
             this.currentCount += count;
         }
 
-        public void Decrement()
-        {
-            this.currentCount--;
-        }
-
-        public void Decrement(int count)
+        public void Decrement(int count = 1)
         {
             this.currentCount -= count;
         }

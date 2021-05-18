@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccesControlForm));
             this.lbMaxPersons = new System.Windows.Forms.Label();
             this.lbCurrentPersons = new System.Windows.Forms.Label();
             this.txtMaxPersons = new System.Windows.Forms.TextBox();
@@ -38,6 +39,7 @@
             this.btnDecrement = new System.Windows.Forms.Button();
             this.txtIncrement = new System.Windows.Forms.TextBox();
             this.txtDecrement = new System.Windows.Forms.TextBox();
+            this.lbNoMorePersons = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbMaxPersons
@@ -84,6 +86,7 @@
             this.btnIncrement1.TabIndex = 4;
             this.btnIncrement1.Text = "+1";
             this.btnIncrement1.UseVisualStyleBackColor = true;
+            this.btnIncrement1.Click += new System.EventHandler(this.btnIncrement1_Click);
             // 
             // btnDecrement1
             // 
@@ -94,6 +97,7 @@
             this.btnDecrement1.TabIndex = 5;
             this.btnDecrement1.Text = "-1";
             this.btnDecrement1.UseVisualStyleBackColor = true;
+            this.btnDecrement1.Click += new System.EventHandler(this.btnDecrement1_Click);
             // 
             // btnIncrement
             // 
@@ -103,6 +107,7 @@
             this.btnIncrement.TabIndex = 6;
             this.btnIncrement.Text = "erhöhen";
             this.btnIncrement.UseVisualStyleBackColor = true;
+            this.btnIncrement.Click += new System.EventHandler(this.btnIncrement_Click);
             // 
             // btnDecrement
             // 
@@ -112,6 +117,7 @@
             this.btnDecrement.TabIndex = 7;
             this.btnDecrement.Text = "verringern";
             this.btnDecrement.UseVisualStyleBackColor = true;
+            this.btnDecrement.Click += new System.EventHandler(this.btnDecrement_Click);
             // 
             // txtIncrement
             // 
@@ -119,6 +125,7 @@
             this.txtIncrement.Name = "txtIncrement";
             this.txtIncrement.Size = new System.Drawing.Size(100, 23);
             this.txtIncrement.TabIndex = 8;
+            this.txtIncrement.TextChanged += new System.EventHandler(this.txtIncrement_TextChanged);
             // 
             // txtDecrement
             // 
@@ -126,12 +133,26 @@
             this.txtDecrement.Name = "txtDecrement";
             this.txtDecrement.Size = new System.Drawing.Size(100, 23);
             this.txtDecrement.TabIndex = 9;
+            this.txtDecrement.TextChanged += new System.EventHandler(this.txtDecrement_TextChanged);
             // 
-            // AccessControl
+            // lbNoMorePersons
+            // 
+            this.lbNoMorePersons.AutoSize = true;
+            this.lbNoMorePersons.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbNoMorePersons.ForeColor = System.Drawing.Color.Red;
+            this.lbNoMorePersons.Location = new System.Drawing.Point(75, 277);
+            this.lbNoMorePersons.Name = "lbNoMorePersons";
+            this.lbNoMorePersons.Size = new System.Drawing.Size(286, 30);
+            this.lbNoMorePersons.TabIndex = 10;
+            this.lbNoMorePersons.Text = "Keine Personen mehr erlaubt!";
+            this.lbNoMorePersons.Visible = false;
+            // 
+            // AccesControlForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 361);
+            this.Controls.Add(this.lbNoMorePersons);
             this.Controls.Add(this.txtDecrement);
             this.Controls.Add(this.txtIncrement);
             this.Controls.Add(this.btnDecrement);
@@ -142,7 +163,8 @@
             this.Controls.Add(this.txtMaxPersons);
             this.Controls.Add(this.lbCurrentPersons);
             this.Controls.Add(this.lbMaxPersons);
-            this.Name = "AccessControl";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "AccesControlForm";
             this.Text = "Access Control";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -162,6 +184,7 @@
         private System.Windows.Forms.Button btnDecrement;
         private System.Windows.Forms.TextBox txtIncrement;
         private System.Windows.Forms.TextBox txtDecrement;
+        private System.Windows.Forms.Label lbNoMorePersons;
     }
 }
 
