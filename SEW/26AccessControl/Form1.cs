@@ -10,27 +10,28 @@ using System.Windows.Forms;
 
 namespace _26AccessControl
 {
-    public partial class AccesControlForm : Form
+    public partial class AccessControlForm : Form
     {
-        private AccesControl ac;
-        public AccesControlForm()
+        private AccessControl ac;
+        public AccessControlForm()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
-        private void txtMaxPersons_TextChanged(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
             try
             {
-                this.ac = new AccesControl(int.Parse(this.txtMaxPersons.Text));
-                UpdateGUI();
+                int persons = int.Parse(this.txtMaxPersons.Text);
+                this.ac = new AccessControl(persons);
+                updateGUI();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 // hier könnten wir Fehler behandeln --> z.B.: Eingabe eines leeren Textes --> FormatException
                 // kann nicht in int umgewandelt werden
@@ -39,76 +40,78 @@ namespace _26AccessControl
             }
         }
 
-        private void UpdateGUI()
+        private void txtMaxPersons_TextChanged(object sender, EventArgs e)
         {
-            if (this.txtMaxPersons.Text == "")
+            try
             {
-                this.txtCurrentPersons.Text = "";
+                int persons = int.Parse(this.txtMaxPersons.Text);
+                this.ac = new AccessControl(persons);
+                updateGUI();
+            }
+            catch (Exception ex)
+            {
+                // hier könnten wir Fehler behandeln --> z.B.: Eingabe eines leeren Textes --> FormatException
+                // kann nicht in int umgewandelt werden
+
+                // wir machen hier nichts
+            }
+
+        }
+
+        private void updateGUI()
+        {
+            this.txtCurrentPersons.Text = this.ac.CurrentCount.ToString();
+
+            // überprüfen ob maximale Anzahl an Personen überschritten wird
+            if (this.ac.canEnter())
+            {
+                this.btnIncrement1.Enabled = true;
+                this.lbNoMorePersons.Visible = false;
             }
             else
             {
-                this.txtCurrentPersons.Text = this.ac.CurrentCount.ToString();
-                // überprüfen ob maximale Anzahl an Personen überschritten wird
-                if (this.txtMaxPersons.Text != "" && this.ac.canEnter())
-                {
-                    this.btnIncrement1.Enabled = true;
-                    this.lbNoMorePersons.Visible = false;
-                }
-                else
-                {
-                    this.btnIncrement1.Enabled = false;
-                    this.lbNoMorePersons.Visible = true;
-                }
-                // überprüfen ob kleiner 0
-                if (this.txtMaxPersons.Text != "" && this.ac.canEnter(-1))
-                {
-                    this.btnDecrement1.Enabled = true;
-                    this.btnDecrement.Enabled = true;
-                }
-                else
-                {
-                    this.btnDecrement1.Enabled = false;
-                    this.btnDecrement.Enabled = false;
-                }
+                this.btnIncrement1.Enabled = false;
+                this.lbNoMorePersons.Visible = true;
             }
 
+            // überprüfen ob < 0
+            if (this.ac.CurrentCount <= 0)
+            {
+                this.btnDecrement1.Enabled = false;
+            }
+            else
+            {
+                this.btnDecrement1.Enabled = true;
+            }
         }
 
         private void btnIncrement1_Click(object sender, EventArgs e)
         {
-            if (this.txtMaxPersons.Text != "")
-            {
-                this.ac.Increment();
-                UpdateGUI();
-            }
-        }
+            this.ac.Increment();
+            this.txtIncrement.Text = "";
+            this.txtDecrement.Text = "";
+            updateGUI();        }
 
         private void btnDecrement1_Click(object sender, EventArgs e)
         {
-            if (this.txtMaxPersons.Text != "")
-            {
-                this.ac.Decrement();
-                UpdateGUI();
-            }
+            this.ac.Decrement();
+            this.txtIncrement.Text = "";
+            this.txtDecrement.Text = "";
+            updateGUI();
         }
 
         private void btnIncrement_Click(object sender, EventArgs e)
         {
-            if (this.txtDecrement.Text != "")
+            try
             {
-                this.ac.Increment(int.Parse(this.txtIncrement.Text));
-                this.txtIncrement.Text = "";    // wir löschen nach dem erhöhen den Wert
-                UpdateGUI();
+                int persons = int.Parse(this.txtIncrement.Text);
+                this.ac.Increment(persons);
+                this.txtIncrement.Text = "";        // wir löschen nach dem erhöhen den Wert.
+                updateGUI();
             }
-        }
-
-        private void btnDecrement_Click(object sender, EventArgs e)
-        {
-            if (this.txtDecrement.Text != "")
+            catch (Exception ex)
             {
-                this.ac.Decrement(int.Parse(this.txtDecrement.Text));
-                this.txtDecrement.Text = "";
-                UpdateGUI();
+
             }
         }
 
@@ -117,7 +120,8 @@ namespace _26AccessControl
             try
             {
                 int persons = int.Parse(this.txtIncrement.Text);
-                if (this.ac.canEnter(persons))
+                // überprüfen ob eine bestimmte Anzahl an Personen noch erlaubt ist.
+                 if (this.ac.canEnter(persons))
                 {
                     this.btnIncrement.Enabled = true;
                 }
@@ -126,9 +130,24 @@ namespace _26AccessControl
                     this.btnIncrement.Enabled = false;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                this.btnIncrement.Enabled = false;
+
+            }
+        }
+
+        private void btnDecrement_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int persons = int.Parse(this.txtDecrement.Text);
+                this.ac.Decrement(persons);
+                this.txtDecrement.Text = "";
+                updateGUI();
+            }
+            catch (Exception ex)
+            {
+
             }
         }
 
@@ -137,7 +156,8 @@ namespace _26AccessControl
             try
             {
                 int persons = int.Parse(this.txtDecrement.Text);
-                if (this.ac.canEnter(persons * -1))
+                // überprüfe ob maximale Anzahl (0) unterschritten wird
+                if (this.ac.canEnter(persons * -1))      // wir addieren eine negative Zahl
                 {
                     this.btnDecrement.Enabled = true;
                 }
@@ -145,10 +165,11 @@ namespace _26AccessControl
                 {
                     this.btnDecrement.Enabled = false;
                 }
+
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                this.btnDecrement.Enabled = false;
+
             }
         }
     }

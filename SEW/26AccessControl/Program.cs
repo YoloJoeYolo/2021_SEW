@@ -17,7 +17,7 @@ namespace _26AccessControl
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AccesControlForm());
+            Application.Run(new AccessControlForm());
         }
     }
 }

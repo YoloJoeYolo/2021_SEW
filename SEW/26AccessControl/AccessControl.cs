@@ -4,13 +4,14 @@ using System.Text;
 
 namespace _26AccessControl
 {
-    class AccesControl
+    class AccessControl
     {
         private int currentCount = 0;
         private int maxCount;
 
-        public AccesControl(int maxCount)
+        public AccessControl(int maxCount)
         {
+         
             this.maxCount = maxCount;
         }
 
@@ -26,19 +27,35 @@ namespace _26AccessControl
             }
         }
 
-        public bool canEnter(int persons = 1)
+        public bool canEnter()
+        {
+            return this.currentCount < this.maxCount;
+        }
+
+        public bool canEnter(int persons)
         {
             return this.currentCount + persons <= this.maxCount && this.currentCount + persons >= 0;
         }
 
-        public void Increment(int count = 1)
+        public void Increment()
+        {
+            this.currentCount++;
+        }
+
+        public void Increment(int count)
         {
             this.currentCount += count;
         }
 
-        public void Decrement(int count = 1)
+        public void Decrement()
+        {
+            this.currentCount--;
+        }
+
+        public void Decrement(int count)
         {
             this.currentCount -= count;
         }
     }
 }
+
