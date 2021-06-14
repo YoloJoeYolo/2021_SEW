@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "25FirstGUI", "25FirstGUI\25
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "26AccessControl", "26AccessControl\26AccessControl.csproj", "{7C211E8D-0F1E-4C8C-82F0-ACDF0F7BE31D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01Nutztiere", "01Nutztiere\01Nutztiere.csproj", "{28ABB89A-032A-4AF1-B5FE-8D2D2648AD08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01Nutztiere", "01Nutztiere\01Nutztiere.csproj", "{28ABB89A-032A-4AF1-B5FE-8D2D2648AD08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02Subtrahieren", "02Subtrahieren\02Subtrahieren.csproj", "{AF2B4203-BB1F-4646-8880-14A57846F566}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02Subtrahieren", "02Subtrahieren\02Subtrahieren.csproj", "{AF2B4203-BB1F-4646-8880-14A57846F566}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "28ImageBrowser", "28ImageBrowser\28ImageBrowser.csproj", "{D13FFF55-2D3E-47C1-933F-F92ED80AECD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{AF2B4203-BB1F-4646-8880-14A57846F566}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF2B4203-BB1F-4646-8880-14A57846F566}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF2B4203-BB1F-4646-8880-14A57846F566}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D13FFF55-2D3E-47C1-933F-F92ED80AECD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D13FFF55-2D3E-47C1-933F-F92ED80AECD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D13FFF55-2D3E-47C1-933F-F92ED80AECD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D13FFF55-2D3E-47C1-933F-F92ED80AECD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
