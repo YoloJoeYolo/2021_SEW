@@ -1,0 +1,3 @@
+﻿\\josephinum.at\system\global\student\home\johannes.werner\Pictures\Tractor.jpg
+\\josephinum.at\system\global\student\home\johannes.werner\Pictures\Farms.jpg
+\\josephinum.at\system\global\student\home\johannes.werner\Pictures\Kuh.jpg+

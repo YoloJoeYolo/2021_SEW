@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01Nutztiere", "01Nutztiere\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02Subtrahieren", "02Subtrahieren\02Subtrahieren.csproj", "{AF2B4203-BB1F-4646-8880-14A57846F566}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "28ImageBrowser", "28ImageBrowser\28ImageBrowser.csproj", "{D13FFF55-2D3E-47C1-933F-F92ED80AECD0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "28ImageBrowser", "28ImageBrowser\28ImageBrowser.csproj", "{1D0E5683-B6D8-4A5A-8A6C-592A038DEA5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{AF2B4203-BB1F-4646-8880-14A57846F566}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF2B4203-BB1F-4646-8880-14A57846F566}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF2B4203-BB1F-4646-8880-14A57846F566}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D13FFF55-2D3E-47C1-933F-F92ED80AECD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D13FFF55-2D3E-47C1-933F-F92ED80AECD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D13FFF55-2D3E-47C1-933F-F92ED80AECD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D13FFF55-2D3E-47C1-933F-F92ED80AECD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D0E5683-B6D8-4A5A-8A6C-592A038DEA5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D0E5683-B6D8-4A5A-8A6C-592A038DEA5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D0E5683-B6D8-4A5A-8A6C-592A038DEA5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D0E5683-B6D8-4A5A-8A6C-592A038DEA5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
