@@ -33,6 +33,7 @@
             this.lb_LoadedFile = new System.Windows.Forms.Label();
             this.ofd_Image = new System.Windows.Forms.OpenFileDialog();
             this.btn_Next = new System.Windows.Forms.Button();
+            this.btn_EditFileList = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb_PictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +50,7 @@
             // 
             // pb_PictureBox
             // 
-            this.pb_PictureBox.Location = new System.Drawing.Point(12, 66);
+            this.pb_PictureBox.Location = new System.Drawing.Point(12, 77);
             this.pb_PictureBox.Name = "pb_PictureBox";
             this.pb_PictureBox.Size = new System.Drawing.Size(460, 372);
             this.pb_PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -74,19 +75,31 @@
             // btn_Next
             // 
             this.btn_Next.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Next.Location = new System.Drawing.Point(372, 12);
+            this.btn_Next.Location = new System.Drawing.Point(362, 12);
             this.btn_Next.Name = "btn_Next";
-            this.btn_Next.Size = new System.Drawing.Size(100, 29);
+            this.btn_Next.Size = new System.Drawing.Size(110, 29);
             this.btn_Next.TabIndex = 3;
             this.btn_Next.Text = "Nächstes -->";
             this.btn_Next.UseVisualStyleBackColor = true;
             this.btn_Next.Click += new System.EventHandler(this.btn_Next_Click);
             // 
+            // btn_EditFileList
+            // 
+            this.btn_EditFileList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EditFileList.Location = new System.Drawing.Point(143, 12);
+            this.btn_EditFileList.Name = "btn_EditFileList";
+            this.btn_EditFileList.Size = new System.Drawing.Size(110, 29);
+            this.btn_EditFileList.TabIndex = 4;
+            this.btn_EditFileList.Text = "Ändere Fileliste";
+            this.btn_EditFileList.UseVisualStyleBackColor = true;
+            this.btn_EditFileList.Click += new System.EventHandler(this.btn_EditFileList_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 450);
+            this.ClientSize = new System.Drawing.Size(484, 461);
+            this.Controls.Add(this.btn_EditFileList);
             this.Controls.Add(this.btn_Next);
             this.Controls.Add(this.lb_LoadedFile);
             this.Controls.Add(this.pb_PictureBox);
@@ -106,6 +119,7 @@
         private System.Windows.Forms.Label lb_LoadedFile;
         private System.Windows.Forms.OpenFileDialog ofd_Image;
         private System.Windows.Forms.Button btn_Next;
+        private System.Windows.Forms.Button btn_EditFileList;
     }
 }
 

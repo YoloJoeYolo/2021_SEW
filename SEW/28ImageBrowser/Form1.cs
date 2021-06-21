@@ -51,5 +51,21 @@ namespace _28ImageBrowser
                 this.currentImage++;
             }
         }
+
+        private void btn_EditFileList_Click(object sender, EventArgs e)
+        {
+            AddFileForm addFile = new AddFileForm();
+            addFile.FileName = this.lb_LoadedFile.Text;     // Wir setzen den Dateinamen in der AddFileForm
+            if (addFile.ShowDialog() == DialogResult.OK)
+            {
+                this.lines = File.ReadAllLines(this.lb_LoadedFile.Text);
+                this.pb_PictureBox.ImageLocation = this.lines[0];
+                this.currentImage = 1;
+            }
+            else
+            {
+
+            } 
+        }
     }
 }
